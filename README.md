@@ -14,17 +14,22 @@ Instructions
 1. Upload zenpiwik.php to /includes/functions/extra_functions.
 
 
-2. Find /templates/Your_Template/common/tpl_shopping_cart_default.php and add this to the top of the page:
+2. Find /includes/templates/Your_Template/templates/tpl_shopping_cart_default.php and add this near the top of the page or after the 1st ?>:
 
-    `/* PIWIK E-Commerce Tracking */
-      $_SESSION['log_cart'] = log_cart($products,$_SESSION['cart']->total,$_SESSION['languages_id']);`
+    <?php	
+       /* PIWIK E-Commerce Tracking */
+       $_SESSION['log_cart'] = log_cart($products,$_SESSION['cart']->total,$_SESSION['languages_id']);
+    ?>
   
-3. - Replace [PIWIKURL] with your Piwik base url in the footer_tracking_code.php file three times.
-   - Replace [SITEID] with your Piwik site id in the footer_tracking_code.php file twice.
-   - Find /templates/Your_Template/common/tpl_footer.php and add the edited code in the footer_tracking_code.php file to the bottom of the page.
+3. Edit includes/footer_tracking_code.php 
+   - Replace [PIWIKURL] with your Piwik base url in the  file three times. (Be sure to include the tailing /)
+   - Replace [SITEID] with your Piwik site id in the footer_tracking_code.php file twice. (In your Piwik click on Settings -> Websites. The Id is the number of the site you have created to track.)
+   - Find includes/templates/Your_Template/common/tpl_footer.php and add the edited code from includes/footer_tracking_code.php in the footer_tracking_code.php file to the bottom of the page.
 
-4. Find /templates/Your_Template/common/tpl_checkout_success_default.php and insert at the top of the page:
+4. Find /includes/templates/Your_Template/common/tpl_checkout_success_default.php and insert at the top of the page:
 
-	`// PIWIK E-Commerce Tracker
-	<? $_SESSION['log_order'] = log_order($zv_orders_id,$orders,$notificationsArray,$_SESSION['languages_id']); ?>`
+    <?php
+      // PIWIK E-Commerce Tracker
+      $_SESSION['log_order'] = log_order($zv_orders_id,$orders,$notificationsArray,$_SESSION['languages_id']); 
+    ?>
 
