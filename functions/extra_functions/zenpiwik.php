@@ -67,7 +67,7 @@
 				$categories_query = "select cd.categories_name from " . TABLE_CATEGORIES_DESCRIPTION ." cd, ". TABLE_PRODUCTS_TO_CATEGORIES . " p2c WHERE cd.categories_id = p2c.categories_id and p2c.products_id = " . (int)$p['products_id'] . " and cd.language_id =".(int)$language_id;
 				$categories = $db->Execute($categories_query);
 
-				$order_product_query = "select products_model, products_tax,                        products_quantity, final_price from " . TABLE_ORDERS_PRODUCTS . "                     where orders_id = " . (int)$insert_id . " and products_id = " . (int)$p['products_id'];
+				$order_product_query = "select products_model, products_tax, products_quantity, final_price from " . TABLE_ORDERS_PRODUCTS . " where orders_id = " . (int)$insert_id . " and products_id = " . (int)$p['products_id'];
 				$order_product = $db->Execute($order_product_query);
 			
 				$string .= 'piwikTracker.addEcommerceItem("'.$order_product->fields['products_model'].'","'.$p['products_name'].'","'.$categories->fields['categories_name'].'",'.(float)$order_product->fields['final_price'].','.$order_product->fields['products_quantity'].');' . "\n";
