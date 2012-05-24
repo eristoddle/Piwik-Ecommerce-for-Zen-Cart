@@ -5,9 +5,10 @@ A plugin that adds Piwik ecommerce tracking to Zen Cart. This plugin was written
 
 To Do
 ====
-- Add Admin Interface
-- Add More Piwik tracking functions
-- See if the orders function can be written with less database calls
+- Tighten up code
+- Add Admin
+- Add Admin Reports
+- Optimize functions and database calls. I may have used more than I needed especially on the log_order function.
 
 Instructions
 ============
