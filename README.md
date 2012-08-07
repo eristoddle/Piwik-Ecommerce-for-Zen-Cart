@@ -23,17 +23,19 @@ Affected files
 Changed files
 -------------
 tpl_footer.php in your current template
+tpl_shopping_cart_default.php in your current template
+tpl_checkout_success_default.php in your current template
 
 New files
 ---------
 - /includes/templates/YOUR_TEMPLATE/common/tpl_footer_piwik.php
 - /includes/templates/YOUR_TEMPLATE/templates/tpl_shopping_cart_default.php
 - /includes/templates/YOUR_TEMPLATE/templates/tpl_checkout_success_default.php
-- /functions/includes/PiwikEcommerce.php
-- /admin/includes/PiwikEcommerce.php
-- /admin/includes/boxes/extra_boxes/PiwikEcommerce_tools_dhtml.php
-- /admin/includes/extra_datafiles/PiwikEcommerce.php
-- /admin/includes/languages/english/extra_definitions/PiwikEcommerce.php
+- /admin/includes/boxes/extra_boxes/piwikecommerce_tools_dhtml.php
+- /functions/includes/piwikecommerce.php
+- /admin/includes/piwikecommerce.php
+- /admin/includes/extra_datafiles/piwikecommerce.php
+- /admin/includes/languages/english/extra_definitions/piwikecommerce.php
 
 Affects DB
 ==========
