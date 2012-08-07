@@ -50,25 +50,19 @@ Features:
 
 Install:
 ============
-These are the current instructions, but files are changing.
 
-1. Upload PiwikEcommerce.php to /includes/functions/extra_functions.
+1. Go to Admin->Tools->Install SQL Patches and install install.sql by copy and pasting the contents of the file into the form there.
 
-2. Find /includes/templates/Your_Template/templates/tpl_shopping_cart_default.php and add this near the top of the page or after the 1st ?>:
+2. Upload catalog/includes/functions/extra_functions/piwikecommerce.php to the /includes/functions/extra_functions/ folder of your ZenCart installation.
 
-<?php    
-   /* PIWIK E-Commerce Tracking */
-   $_SESSION['log_cart'] = log_cart($products,$_SESSION['cart']->total,$_SESSION['languages_id']);
-?>
-  
-3. Edit includes/footer_tracking_code.php 
-   - Replace [PIWIKURL] with your Piwik base url in the  file three times. (Be sure to include the tailing / on the top 2 changes)
-   - Replace [SITEID] with your Piwik site id in the footer_tracking_code.php file twice. (In your Piwik click on Settings -> Websites. The Id is the number of the site you have created to track.)
-   - Find includes/templates/Your_Template/common/tpl_footer.php and add the edited code from includes/footer_tracking_code.php near the bottom of the page.
+3. Upload the contents of the catalog/admin folder to the admin folder of your ZenCart installation. Note that if you renamed your admin folder for security reasons, it will not be named "admin" now.
 
-4. Find /includes/templates/Your_Template/templates/tpl_checkout_success_default.php and insert at the top of the page:
+4. If you are using a default footer file for your current template, you can upload catalog/includes/templates/YOUR_TEMPLATE/common/tpl_footer.php to the folder of your current template to replace the tpl_footer.php file in your template's common folder. If you are using a modified tpl_footer.php file in your template, you must copy the code between <!-- Piwik with E-Commerce Tracking--> and <!-- End Piwik with E-Commerce Tracking--> at the bottom of the catalog/includes/templates/YOUR_TEMPLATE/common/tpl_footer.php file to the bottom of your current tpl_footer.php file.
 
-<?php
-  // PIWIK E-Commerce Tracker
-  $_SESSION['log_order'] = log_order($zv_orders_id,$orders,$notificationsArray,$_SESSION['languages_id']); 
-?>
+5. If you are using a default tpl_shopping_cart_default.php template file for your current template, you can upload catalog/includes/templates/YOUR_TEMPLATE/templates/tpl_shopping_cart_default.php to the folder of your current template to replace the tpl_shopping_cart_default.php file in your template's common folder. If you are using a modified tpl_shopping_cart_default.php file in your template, you must copy the code between <!-- Piwik with E-Commerce Tracking--> and <!-- End Piwik with E-Commerce Tracking--> at the top of the catalog/includes/templates/YOUR_TEMPLATE/templates/tpl_shopping_cart_default.php file to the top of your current tpl_shopping_cart_default.php file, right after the set of comments at the top of the file.
+
+6. If you are using a default tpl_checkout_success_default.php template file for your current template, you can upload catalog/includes/templates/YOUR_TEMPLATE/templates/tpl_checkout_success_default.php to the folder of your current template to replace the tpl_checkout_success_default.php file in your template's common folder. If you are using a modified tpl_shopping_cart_default.php file in your template, you must copy the code between <!-- Piwik with E-Commerce Tracking--> and <!-- End Piwik with E-Commerce Tracking--> at the top of the catalog/includes/templates/YOUR_TEMPLATE/templates/checkout_success_default.php file to the top of your current tpl_shopping_cart_default.php file, right after the set of comments at the top of the file.
+
+7. Add your Piwik credentials at Admin->Configuration->Piwik Analytics Configuration
+
+8. View your Piwik reports dashboard at Admin->Reports->Piwik Analytics Reports
