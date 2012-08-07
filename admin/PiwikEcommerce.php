@@ -4,11 +4,11 @@
  * @copyright Copyright 2003-2007 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: customers.php 7185 2007-10-05 15:35:38Z drbyte $
+ * @version $Id: PiwikEcommerce_reports.dhtml.php eristoddle $
  */
  /*
- * MyZenModule
- * version x.x, Your Company, V1.0, YourWebsite.com
+ * PiwikEcommerce for Zen-Cart
+ * version 1.0, Stephan Miller, V1.0, StephanMiller.com
  *
  */
   require('includes/application_top.php');
