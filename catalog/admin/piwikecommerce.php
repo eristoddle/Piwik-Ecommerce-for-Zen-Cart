@@ -72,7 +72,7 @@ function check_form() {
     </tr>
     <tr>
     <td>
-        <iframe src="<?php echo PIWIK_URL; ?>index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
+        <iframe src="<?php echo PIWIK_URL; ?>index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday&token_auth=<?php echo PIWIK_TOKEN_AUTH; ?>" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
     </td>
     </tr>
 </table>
