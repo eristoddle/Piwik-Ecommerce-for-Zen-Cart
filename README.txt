@@ -66,3 +66,7 @@ Install:
 7. Add your Piwik credentials at Admin->Configuration->Piwik Analytics Configuration
 
 8. View your Piwik reports dashboard at Admin->Reports->Piwik Analytics Reports
+
+Issues
+======
+Because of the embedded widget and cross domain issues, there may be two vertical scroll bars. I thought of creating a shim page to fix it, but this is still an ugly fix.
