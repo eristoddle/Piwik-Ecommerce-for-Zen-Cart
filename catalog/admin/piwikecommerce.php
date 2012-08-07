@@ -18,13 +18,20 @@
 <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
 <link rel="stylesheet" type="text/css" href="includes/cssjsmenuhover.css" media="all" id="hoverJS">
 <style type="text/css">
-        html, body { margin: 0; padding: 0; height: 100%; }
-        iframe {
-		position: absolute;
-		left: 0; width: 100%; height: 100%;
-		border: none; padding-top: 32px;
-		box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
         }
+        iframe {
+            position: absolute;  
+            height: 100%;
+            width: 99%;
+            border: none;
+            box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            -webkit-box-sizing: border-box;
+        }        
 </style>
 <script language="javascript" src="includes/menu.js"></script>
 <script language="javascript" src="includes/general.js"></script>
@@ -71,13 +78,10 @@ function check_form() {
         </td>
     </tr>
     <tr>
-    <td>
-        <iframe src="<?php echo PIWIK_URL; ?>index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday&token_auth=<?php echo PIWIK_TOKEN_AUTH; ?>" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
-    </td>
+        <td><iframe src="<?php echo PIWIK_URL; ?>index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=<?php echo PIWIK_REPORT_PERIOD; ?>&date=<?php echo PIWIK_REPORT_DATE; ?>&token_auth=<?php echo PIWIK_TOKEN_AUTH; ?>" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe></td>
     </tr>
 </table>
 <!-- body_eof //-->
-
 <!-- footer //-->
 <?php require(DIR_WS_INCLUDES . 'footer.php'); ?>
 <!-- footer_eof //-->
