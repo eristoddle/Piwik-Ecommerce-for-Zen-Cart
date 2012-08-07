@@ -12,7 +12,7 @@ Stephan Miller http://www.StephanMiller.com
 
 Description
 ============
-A plugin that adds Piwik ecommerce tracking to Zen Cart as well as access to Piwik reports in the ZenCart reports menu. This plugin was written by [Stephan Miller](http://www.stephanmiller.com) for a book on Piwik Analytics by Packt Publishing.
+A plugin that adds Piwik ecommerce tracking to Zen Cart as well as access to Piwik reports in the ZenCart reports menu. This plugin was written by [Stephan Miller](http://www.stephanmiller.com) for [a book on Piwik Analytics](http://www.packtpub.com/piwik-web-analytics-essentials/book) published by Packt Publishing.
 
 Support forum
 =============
@@ -27,6 +27,8 @@ tpl_footer.php in your current template
 New files
 ---------
 - /includes/templates/YOUR_TEMPLATE/common/tpl_footer_piwik.php
+- /includes/templates/YOUR_TEMPLATE/templates/tpl_shopping_cart_default.php
+- /includes/templates/YOUR_TEMPLATE/templates/tpl_checkout_success_default.php
 - /functions/includes/PiwikEcommerce.php
 - /admin/includes/PiwikEcommerce.php
 - /admin/includes/boxes/extra_boxes/PiwikEcommerce_tools_dhtml.php
