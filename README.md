@@ -2,6 +2,8 @@ Name
 ====
 Piwik Ecommerce for ZenCart version 1.3.9 and lower
 
+Go [here](https://github.com/eristoddle/Piwik-Ecommerce-for-Zen-Cart-1.5) for the plugin that works on version 1.5.
+
 Version Date
 ============
 v 1.0.0 08.07.2012
