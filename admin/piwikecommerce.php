@@ -68,7 +68,7 @@ function check_form() {
 <table border="0" width="99%" cellspacing="2" cellpadding="2">
     <tr>
         <td colspan="7">
-        <h1><?php echo HEADING_TITLE_MYZENMODULE; ?></h1>
+        <h1><?php echo HEADING_TITLE_PIWIKECOMMERCE; ?></h1>
         </td>
     </tr>
     <tr>
