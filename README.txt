@@ -1,6 +1,6 @@
 Name
 ====
-Piwik Ecommerce for ZenCart
+Piwik Ecommerce for ZenCart version 1.3.9 and lower
 
 Version Date
 ============

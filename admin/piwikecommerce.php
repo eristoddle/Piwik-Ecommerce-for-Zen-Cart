@@ -1,16 +1,12 @@
 <?php
 /**
- * @package admin
+ * @package piwik ecommerce
  * @copyright Copyright 2003-2007 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: PiwikEcommerce_reports.dhtml.php eristoddle $
  */
- /*
- * PiwikEcommerce for Zen-Cart
- * version 1.0, Stephan Miller, V1.0, StephanMiller.com
- *
- */
+
   require('includes/application_top.php');
 
   $error = false;
@@ -24,6 +20,15 @@
 <title><?php echo TITLE; ?></title>
 <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
 <link rel="stylesheet" type="text/css" href="includes/cssjsmenuhover.css" media="all" id="hoverJS">
+<style type="text/css">
+        html, body { margin: 0; padding: 0; height: 100%; }
+        iframe {
+		position: absolute;
+		left: 0; width: 100%; height: 100%;
+		border: none; padding-top: 32px;
+		box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+        }
+</style>
 <script language="javascript" src="includes/menu.js"></script>
 <script language="javascript" src="includes/general.js"></script>
 <?php   if ($action == 'edit' || $action == 'update') { ?>
@@ -73,7 +78,7 @@ function check_form() {
     </tr>
     <tr>
     <td>
-        <iframe src="<?php echo PIWIK_URL; ?>/piwik/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
+        <iframe src="<?php echo PIWIK_URL; ?>index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
     </td>
     <!-- body_text_eof //-->
     </tr>
@@ -87,4 +92,3 @@ function check_form() {
 </body>
 </html>
 <?php require(DIR_WS_INCLUDES . 'application_bottom.php'); ?>
-?>
