@@ -8,12 +8,12 @@
 ?>
 <!-- Piwik with E-Commerce Tracking-->
 <script type="text/javascript">
-	var pkBaseURL = (("https:" == document.location.protocol) ? "https://[PIWIKURL]" : "http://[PIWIKURL]");
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://<?php echo PIWIK_URL; ?>" : "http://<?php echo PIWIK_URL; ?>");
 	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
 	try {
-		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", [SITEID]);
+		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <?php echo PIWIK_ID; ?>);
 		<?php
  			if (($current_page_base == FILENAME_DEFAULT) && zen_not_null($current_category_id)) {
 				if ($log_category = log_category((int)$current_category_id,$_SESSION['languages_id'])) {
@@ -43,5 +43,5 @@
 		piwikTracker.setConversionAttributionFirstReferrer();
 	} catch( err ) {}
 </script>
-<noscript><p><img src="http://[PIWIKURL]/piwik.php?idsite=[SITEID]" style="border:0" alt="" /></p></noscript>
+<noscript><p><img src="http://<?php echo PIWIK_URL; ?>/piwik.php?idsite=<?php echo PIWIK_ID; ?>" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik E-Commerce Tracking Tracking Code -->
