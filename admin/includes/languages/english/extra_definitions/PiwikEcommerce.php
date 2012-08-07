@@ -7,14 +7,12 @@
  * @version $Id: PiwikEcommerce_reports.dhtml.php eristoddle $
  */
  /*
- /*
  * PiwikEcommerce for Zen-Cart
  * version 1.0, Stephan Miller, V1.0, StephanMiller.com
  *
  */
 
-//define constants
-define('HEADING_TITLE_MYZENMODULE', 'MyZen Module');
-define('BOX_ORDERS_MYZENMODULE', 'MyZen Module');
+define('HEADING_TITLE_PIWIKECOMMMERCE', 'Piwik Analtyics');
+define('BOX_REPORTS_PIWIKECOMMMERCE', 'Piwik Analtyics');
 
 ?>

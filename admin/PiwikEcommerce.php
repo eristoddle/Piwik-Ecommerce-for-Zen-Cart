@@ -62,7 +62,7 @@ function check_form() {
 <!-- header_eof //-->
 
 <?php
-//HERE YOUR CODE
+//Will configuration load here?
 ?>
 
 <table border="0" width="99%" cellspacing="2" cellpadding="2">
@@ -73,7 +73,7 @@ function check_form() {
     </tr>
     <tr>
     <td>
-    HERE YOUR DATA
+        <iframe src="<?php echo PIWIK_URL; ?>/piwik/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=<?php echo PIWIK_ID; ?>&period=week&date=yesterday" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
     </td>
     <!-- body_text_eof //-->
     </tr>

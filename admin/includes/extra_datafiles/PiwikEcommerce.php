@@ -7,7 +7,6 @@
  * @version $Id: PiwikEcommerce_reports.dhtml.php eristoddle $
  */
  /*
- /*
  * PiwikEcommerce for Zen-Cart
  * version 1.0, Stephan Miller, V1.0, StephanMiller.com
  *
@@ -17,5 +16,5 @@
   die('Illegal Access');
 }
 
- $za_contents[] = array('text' => BOX_MYZENMODULE, 'link' => zen_href_link(FILENAME_MYZENMODULE, '', 'NONSSL'));
+ $za_contents[] = array('text' => BOX_PIWIKECOMMMERCE, 'link' => zen_href_link(FILENAME_PIWIKECOMMMERCE, '', 'NONSSL'));
 ?>

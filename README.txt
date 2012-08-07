@@ -29,7 +29,7 @@ New files
 /includes/templates/YOUR_TEMPLATE/common/tpl_footer_piwik.php
 /functions/includes/PiwikEcommerce.php
 /admin/includes/PiwikEcommerce.php
-/admin/includes/extra_boxes/PiwikEcommerce.php
+/admin/includes/boxes/extra_boxes/PiwikEcommerce_tools_dhtml.php
 /admin/includes/extra_datafiles/PiwikEcommerce.php
 /admin/includes/languages/english/extra_definitions/PiwikEcommerce.php
 
